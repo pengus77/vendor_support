@@ -57,8 +57,7 @@ public class SecureSettingSwitchPreference extends SwitchPreference {
     }
 
     @Override
-    protected void onSetInitialValue(boolean restoreValue, Object defaultValue) {
-        setChecked(Settings.System.getString(getContext().getContentResolver(), getKey()) != null ? getPersistedBoolean(isChecked())
-                : (Boolean) defaultValue);
+    protected boolean isPersisted() {
+        return Settings.Secure.getString(getContext().getContentResolver(), getKey()) != null;
     }
 }
