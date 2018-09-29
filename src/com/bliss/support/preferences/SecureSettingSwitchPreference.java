@@ -23,6 +23,7 @@ import android.os.UserHandle;
 import android.util.AttributeSet;
 
 public class SecureSettingSwitchPreference extends SwitchPreference {
+
     public SecureSettingSwitchPreference(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
     }
@@ -37,23 +38,13 @@ public class SecureSettingSwitchPreference extends SwitchPreference {
 
     @Override
     protected boolean persistBoolean(boolean value) {
-        if (shouldPersist()) {
-            if (value == getPersistedBoolean(!value)) {
-                // It's already there, so the same as persisting
-                return true;
-            }
-            Settings.Secure.putIntForUser(getContext().getContentResolver(),
-                getKey(), value ? 1 : 0, UserHandle.USER_CURRENT);
-            return true;
-        }
-        return false;
+        Settings.Secure.putIntForUser(getContext().getContentResolver(),
+            getKey(), value ? 1 : 0, UserHandle.USER_CURRENT);
+        return true;
     }
 
     @Override
     protected boolean getPersistedBoolean(boolean defaultReturnValue) {
-        if (!shouldPersist()) {
-            return defaultReturnValue;
-        }
         return Settings.Secure.getIntForUser(getContext().getContentResolver(),
                 getKey(), defaultReturnValue ? 1 : 0, UserHandle.USER_CURRENT) != 0;
     }
