@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2014 The CyanogenMod project
+ * Copyright (C) 2016-2017 crDroid Android
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,7 +13,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
 package com.bliss.support.preferences;
 
 import android.content.Context;
@@ -57,7 +56,8 @@ public class GlobalSettingSwitchPreference extends SwitchPreference {
     }
 
     @Override
-    protected boolean isPersisted() {
-        return Settings.Global.getString(getContext().getContentResolver(), getKey()) != null;
+    protected void onSetInitialValue(boolean restoreValue, Object defaultValue) {
+        setChecked(Settings.Global.getString(getContext().getContentResolver(), getKey()) != null ? getPersistedBoolean(isChecked())
+                : (Boolean) defaultValue);
     }
 }
