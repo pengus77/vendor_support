@@ -24,29 +24,4 @@
         <attr name="continuousUpdates" format="boolean" />
     </declare-styleable>
 
-    <!-- Value to pass to callback when restore button is pressed -->
-    <declare-styleable name="ColorPickerPreference">
-        <attr name="alphaSlider" format="boolean" />
-        <attr name="showPreview" format="boolean" />
-        <attr name="showReset" format="boolean" />
-        <attr name="dividerAbove" format="boolean" />
-        <attr name="dividerBelow" format="boolean" />
-    </declare-styleable>
-
-    <!-- Color Blend -->
-    <declare-styleable name="ColorBlendPreference">
-        <!-- Preference keys -->
-        <attr name="keyColorStart" format="string" />
-        <attr name="keyColorEnd" format="string" />
-        <attr name="keyBlendReverse" format="string" />
-        <!-- Default values -->
-        <attr name="defaultValueColorStart" format="color" />
-        <attr name="defaultValueColorEnd" format="color" />
-        <attr name="defaultValueBlendReverse" format="boolean" />
-        <!-- Preview strings -->
-        <attr name="previewStartText" format="string" />
-        <attr name="previewEndText" format="string" />
-        <attr name="previewBetweenText" format="string" />
-    </declare-styleable>
-
 </resources>

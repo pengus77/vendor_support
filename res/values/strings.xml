@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Copyright (C) 2019 The BlissRoms Project
+     Copyright (C) 2020 The KowalskiOS Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -16,29 +17,10 @@
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
-    <!-- Color Picker -->
-    <string name="dialog_color_picker">Color Picker</string>
-    <string name="press_color_to_apply">Press on color below to apply</string>
-    <string name="arrow_right">→</string>
-    <string name="arrow_down">↓</string>
-    <string name="hex">Hex:</string>
-    <string name="hex_hint">#ff000000</string>
-    <string name="set">Set</string>
-    <string name="color_default">Default</string>
-
     <!-- Custom seekbar -->
     <string name="custom_seekbar_value">Value: <xliff:g id="v">%s</xliff:g></string>
     <string name="custom_seekbar_default_value">Default</string>
     <string name="custom_seekbar_default_value_to_set">Default value: <xliff:g id="v">%s</xliff:g>\nLong press to set</string>
     <string name="custom_seekbar_default_value_is_set">Default value is set</string>
-
-    <!-- Color Blend -->
-    <string name="color_blend_ok">@android:string/ok</string>
-    <string name="color_blend_cancel">@android:string/cancel</string>
-    <string name="color_blend_reset">Reset</string>
-    <string name="color_blend_preview">Preview: %1$d%%</string>
-    <string name="color_preview_start">Start</string>
-    <string name="color_preview_end">End</string>
-    <string name="color_preview_between">Between</string>
 
 </resources>
